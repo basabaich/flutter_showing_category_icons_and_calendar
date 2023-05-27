@@ -25,11 +25,12 @@ class _NewExpenseState extends State<NewExpense> {
   void _presentDatePicker() async {
     final now = DateTime.now();
     final firstDate = DateTime(now.year - 1, now.month, now.day);
+    final lastDate = DateTime(now.year + 20, now.month, now.day);
     await showDatePicker(
       context: context,
       initialDate: now,
       firstDate: firstDate,
-      lastDate: now,
+      lastDate: lastDate,
     );
     //Show date picker is an inbuilt flutter function. This function is used
     //here with "await" & "async" commands as user can select a future date
